@@ -57,11 +57,11 @@ function CurrentUserOrBook(name){
 }
 
 
-CurrentUser.prototype.addToDB = function(data){
+CurrentUserOrBook.prototype.addToDB = function(data){
     this.updateDB(data)
 }
 
-CurrentUser.prototype.getFromDB = function(){
+CurrentUserOrBook.prototype.getFromDB = function(){
     return JSON.parse(localStorage.getItem(this.name))
 }
 
