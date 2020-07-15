@@ -18,15 +18,15 @@ const registerUser = () =>{
         let userData = {
             name:userNo,
             fullName:fullName,
-            password:userPassword,
+            password:hash(userPassword),
             email:userEmail
         }
         let flag = false
-        let userDatas = users.allData()
+        let userDatas = usersDetails.allData()
         if(!userDatas.length){
             let count = 1
             console.log(userData, count)
-            users.create(userData)
+            usersDetails.create(userData)
         }
         else if (userDatas.length > 0){
             for (var i = 0; i < userDatas.length; i++){
@@ -42,7 +42,7 @@ const registerUser = () =>{
                 }
             }
             if(flag){
-                users.create(userData)
+                usersDetails.create(userData)
             }
             
         }
@@ -50,10 +50,9 @@ const registerUser = () =>{
 }
 
 
-
 const loginUser = () => {
     event.preventDefault()
-    let userDatas = users.allData()
+    let userDatas = usersDetails.allData()
     let userName = document.getElementById("login_user_name").value
     let userPassword = document.getElementById("login_user_password").value
     if(userName === "" || userPassword === ""){
@@ -70,10 +69,10 @@ const loginUser = () => {
             password:userPassword,
         }
         for (var i = 0; i < userDatas.length; i++){
-            if(userDatas[i].email === userData.name && userDatas[i].password !== userData.password){
+            if(userDatas[i].email === userData.name && userDatas[i].password !== hash(userData.password)){
                 alert('Wrong Password')
             }
-            else if (userDatas[i].email === userData.name && userDatas[i].password === userData.password){
+            else if (userDatas[i].email === userData.name && userDatas[i].password === hash(userData.password)){
                 if(userDatas[i].flag === true){
                     loggedUser.addToDB(userDatas[i])
                     setTimeout(function () {
@@ -95,4 +94,23 @@ const loginUser = () => {
 
 // userName chg to userNo
 
+const hash = (password) =>{
+    password = password+""
+    // console.log(data)
+    let result = encrypt(0, password.length - 1, password)
+    return result
+}
 
+const encrypt = (first, last, string) => {
+    // console.log(string)
+    if(first === last){
+        return string[first]
+    }
+    else if(first <= last){
+        var middle = Math.floor((first + last)/ 2)
+        return string[middle] + encrypt(first, middle - 1, string) + encrypt(middle + 1, last, string)
+    }
+    else{
+        return ""
+    }
+}
