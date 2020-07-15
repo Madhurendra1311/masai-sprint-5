@@ -126,19 +126,6 @@ CreateBookDB.prototype.activity = function(time){
 }
 
 
-
-CreateBookDB.prototype.rmBooks = function(){
-    let data = this.allData()
-    if(data.length < 2){
-        alert("Sorry there is no book to remove")
-    }
-    else{
-        data.splice(1,1)
-        this.updateDB(data)
-    }
-}
-
-
 let usersDetails = new CreateUsersDB ("AllUsers")
 let loggedUser = new CurrentUserOrBook('User')
 let selectedBook = new CurrentUserOrBook('Book')
