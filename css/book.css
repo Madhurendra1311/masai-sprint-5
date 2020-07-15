@@ -1,0 +1,14 @@
+.innerBook{
+    width: 290px;
+    margin: 0;
+    padding: 0;
+}
+
+#result{
+    position: relative;
+}
+
+#box_2{
+    position: absolute;
+    top: 330px;
+}

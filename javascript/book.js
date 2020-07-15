@@ -37,6 +37,6 @@ const pageLoad = (data) => {
 
 const goBack = () => {
     setTimeout(function () {
-        location.href = "../html/userPage.html"
+        location.href = "../html/userHomepage.html"
     }, 500)
 }
