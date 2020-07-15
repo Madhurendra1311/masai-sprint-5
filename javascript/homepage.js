@@ -73,7 +73,7 @@ const loginUser = () => {
                 if(userDatas[i].flag === true){
                     loggedUser.addToDB(userDatas[i])
                     setTimeout(function () {
-                        location.href = "../html/userHomePage.html"
+                        location.href = "../html/userHomepage.html"
                     }, 500)
                     break
                 }
