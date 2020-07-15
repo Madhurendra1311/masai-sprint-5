@@ -1,7 +1,5 @@
-window.addEventListener('load', function(){
-    let chosenBook = selectedBook.get()
-    pageLoad(chosenBook)
 
+<<<<<<< HEAD
 })
 
 const pageLoad = (data) => {
@@ -40,3 +38,5 @@ const goBack = () => {
         location.href = "../html/userHomepage.html"
     }, 500)
 }
+=======
+>>>>>>> 858d57c781cba8c240a25990d83bf346c67a375e
