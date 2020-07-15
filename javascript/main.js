@@ -125,23 +125,6 @@ CreateBookDB.prototype.activity = function(time){
     
 }
 
-CreateBookDB.prototype.activity = function(time){
-    let data = this.allData()
-    // console.log(this)
-    if(!data.length){
-        let timeData = {
-            login:[time]
-        }
-        data.push(timeData)
-        this.updateDB(data)
-    }
-    else{
-        data[0].login.push(time)
-        this.updateDB(data)
-    }
-    // console.log(data)
-    
-}
 
 let usersDetails = new CreateUsersDB ("AllUsers")
 let loggedUser = new CurrentUserOrBook('User')
