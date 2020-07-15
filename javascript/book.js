@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function(){
     let chosenBook = selectedBook.get()
     pageLoad(chosenBook)
