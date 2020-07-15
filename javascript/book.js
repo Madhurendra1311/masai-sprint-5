@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-    let chosenBook = selectedBook.get()
+    let chosenBook = selectedBook.getFromDB()
     pageLoad(chosenBook)
 
 })

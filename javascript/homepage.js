@@ -7,7 +7,7 @@ const registerUser = () =>{
     let fullName = document.getElementById("full_name").value
     let userEmail = document.getElementById("email").value
     let userPassword = document.getElementById("password").value
-    let userNo = document.getElementById("phone_number").value
+    let userNo = document.getElementById("user_name").value
     if(userNo === "" || userPassword === "" || userPassword === "" || fullName === ""){
         alert('All the inputs must be filled')
     }
@@ -73,7 +73,7 @@ const loginUser = () => {
                 if(userDatas[i].flag === true){
                     loggedUser.addToDB(userDatas[i])
                     setTimeout(function () {
-                        location.href = "../html/profilePage.html"
+                        location.href = "../html/userHomePage.html"
                     }, 500)
                     break
                 }
