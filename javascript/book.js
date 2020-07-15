@@ -1,11 +1,13 @@
+window.addEventListener('load', function(){
+    let chosenBook = selectedBook.get()
+    pageLoad(chosenBook)
 
-<<<<<<< HEAD
 })
 
 const pageLoad = (data) => {
     let display = document.getElementById('result')
     display.innerHTML = ""
-    let allUsers = users.allData()
+    let allUsers = usersDetails.allData()
     let uInfo = document.getElementById('info')
     uInfo.innerHTML = ""
     uInfo.innerText = 'Contact: ' + allUsers[data.bookHolderId - 1].email
@@ -38,5 +40,3 @@ const goBack = () => {
         location.href = "../html/userHomepage.html"
     }, 500)
 }
-=======
->>>>>>> 858d57c781cba8c240a25990d83bf346c67a375e
