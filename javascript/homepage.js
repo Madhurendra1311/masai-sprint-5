@@ -2,9 +2,6 @@ window.addEventListener('load', function(){
     
 })
 
-
-
-
 const registerUser = () =>{
     event.preventDefault()
     let fullName = document.getElementById("full_name").value
