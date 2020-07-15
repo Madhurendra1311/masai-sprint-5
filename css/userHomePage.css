@@ -1,0 +1,99 @@
+#top_bar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+}
+
+
+#top_bar > .card{
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 0;
+    height: 120px;
+    background-color: rgb(32, 160, 75);
+    border-color:   rgb(32, 160, 75);
+}
+
+#top_bar > .card > img{
+    position: absolute;
+}
+
+
+#lgn_rg_holder{
+    position: fixed;
+    top: 120px;
+    
+}
+
+#lgn_rg_holder > .card:nth-child(1){
+    position: absolute;
+    top:0;
+    border-color: white;
+    border-top-left-radius: 80px;
+    z-index: 1;
+    
+}
+
+
+#lgn_rg_holder > .card:nth-child(2){
+    position: absolute;
+    top: 0;
+    height: 80px;
+    border-top-left-radius: 0;
+    background-color: rgb(32, 160, 75);
+    border-color:   rgb(32, 160, 75);
+    z-index: 0;
+}
+
+#btm_bar{
+    position: relative;
+}
+
+
+#btm_bar > nav{
+    position: fixed;
+    bottom: -70px;
+    height: 120px;
+    border-radius: 85px;
+    padding-bottom: 70px;
+
+}
+
+#center_prot{
+    position: absolute;
+    left: 54%;
+    margin-left: -50px;
+    top: 20%;
+    margin-top: -50px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size:24px;
+    width: 60px;
+    height: 60px;
+}
+
+#result{
+    position: relative;
+    top: 180px;
+    z-index: 2;
+}
+
+
+#result > .card{
+    border-radius: 20px;
+}
+
+
+#result > .card:last-child{
+    margin-bottom: 80px;
+}
+
+
+.img_flt{
+    width: 60px;
+}
+
+
+.gradBg{
+    background-image: linear-gradient(to right, rgba(92, 167, 190, 0.692) , rgba(43, 110, 236, 0.705));
+}
