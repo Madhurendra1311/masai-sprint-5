@@ -52,3 +52,4 @@ const logout = () =>{
     window.location.reload(true);
     window.location.replace('../html/login.html');
 }
+

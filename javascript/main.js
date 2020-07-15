@@ -38,6 +38,20 @@ CreateUsersDB.prototype.create = function (userData){
 }
 
 
+CreateUsersDB.prototype.blockUser = function(number){
+    let temp = this.allData()
+    temp[number - 1].flag = false
+    temp.splice(number - 1, 1, temp[number - 1])
+    this.updateDB(temp)
+}
+
+
+CreateUsersDB.prototype.unBlockUser = function (number){
+    let temp = this.allData()
+    temp[number - 1].flag = true
+    temp.splice(number - 1, 1, temp[number - 1])
+    this.updateDB(temp)
+}
 
 // the current user details
 function CurrentUserOrBook(name){
@@ -107,7 +121,35 @@ CreateBookDB.prototype.offer = function(postBook){
 }
 
 
+CreateBookDB.prototype.activity = function(time){
+    let data = this.allData()
+    // console.log(this)
+    if(!data.length){
+        let timeData = {
+            login:[time]
+        }
+        data.push(timeData)
+        this.updateDB(data)
+    }
+    else{
+        data[0].login.push(time)
+        this.updateDB(data)
+    }
+    // console.log(data)
+    
+}
 
+
+CreateBookDB.prototype.rmBooks = function(){
+    let data = this.allData()
+    if(data.length < 2){
+        alert("Sorry there is no book to remove")
+    }
+    else{
+        data.splice(1,1)
+        this.updateDB(data)
+    }
+}
 
 let usersDetails = new CreateUsersDB ("AllUsers")
 let loggedUser = new CurrentUserOrBook('User')
