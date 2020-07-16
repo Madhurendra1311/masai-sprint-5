@@ -81,29 +81,13 @@ CurrentUserOrBook.prototype.getFromDB = function(){
 
 
 
-
-// Database for individual user offered books
 function CreateBookDB(name){
+    CreateUsersDB.call(this)
     this.name = name
-
-    this.init = function(){
-        let result = JSON.parse(localStorage.getItem(this.name))
-        if(!result){
-            this.updateDB([])
-        }
-    }
-
-    this.updateDB = function(data){
-        localStorage.setItem(this.name, JSON.stringify(data))
-    }
-
-    this.allData = function(){
-        this.init()
-        return JSON.parse(localStorage.getItem(this.name))
-    }
-
 }
 
+CreateBookDB.prototype = Object.create(CreateUsersDB.prototype)
+CreateBookDB.prototype.constructor = CreateBookDB
 
 CreateBookDB.prototype.offer = function(postBook){
     let data = this.allData()
