@@ -17,7 +17,8 @@ const pageLoad = (data) => {
             <i class="fa fa-user m-2 rounded-circle bg-white p-2" style="font-size:24px"></i>
             <div class="mt-3 text-white">Book offered by ${data.fullName}</div>
         </div>
-        <img src="../Resources/innerBook.jpg" alt="innerBook" class="innerBook d-lg-none d-md-none rounded-top">
+        <img src="../Resources/innerBook.jpg" alt="innerBook" class="innerBook d-block d-sm-none rounded-top">
+        <img src="../Resources/innerBook.jpg" alt="innerBook" class="innerBook w-100 h-25 d-none d-md-block d-lg-block rounded-top">
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12" id="box_2">
         <div class="card border-top-0">

@@ -2,6 +2,7 @@
 // Database for registered users (to get and store )
 function CreateUsersDB(name){
 
+    
     this.name = name
 
     this.init = function(){
