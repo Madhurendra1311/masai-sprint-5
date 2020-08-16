@@ -60,3 +60,11 @@ Upon entering the details the user can view his/her listed books in his profile 
 * Admin page consists of all the users registered they can be blocked.
 
 ![Admin Page](https://github.com/Madhurendra1311/masai-sprint-5/blob/master/Resources/readme/admin.png)
+
+---
+
+the current product works using local storage.
+
+© [Aravindan S](https://github.com/aravindsakthivel) 
+
+© [Falak](https://github.com/Madhurendra1311) 
