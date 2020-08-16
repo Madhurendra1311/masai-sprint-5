@@ -67,4 +67,4 @@ the current product works using local storage.
 
 © [Aravindan S](https://github.com/aravindsakthivel) 
 
-© [Falak](https://github.com/Madhurendra1311) 
+© [Madhurendra kumar](https://github.com/Madhurendra1311) 
