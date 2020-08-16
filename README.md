@@ -2,14 +2,14 @@
 
 # Resiphrase - Book offering platform
 ### Contents:
-#### 1. Registration Page
-#### 2. Login Page
-#### 3. Home Page
-#### 4. List A Book
-#### 5. Profile Page
-#### 6. Book Page
-#### 7. Request Book
-#### 8. Admin page
+ 1. Registration Page
+ 2. Login Page
+ 3. Home Page
+ 4. List A Book
+ 5. Profile Page
+ 6. Book Page
+ 7. Request Book
+ 8. Admin page
   
 ---
 
