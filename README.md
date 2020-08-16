@@ -2,7 +2,7 @@
 
 # Resiphrase - Book offering platform
 ### Contents:
- 1. Registration Page
+#### 1. Registration Page
  2. Login Page
  3. Home Page
  4. List A Book
