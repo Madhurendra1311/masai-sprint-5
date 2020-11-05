@@ -1,18 +1,17 @@
-window.addEventListener('load', function(){
-    let chosenBook = selectedBook.get()
-    pageLoad(chosenBook)
-
-})
+window.addEventListener("load", function () {
+  let chosenBook = selectedBook.get();
+  pageLoad(chosenBook);
+});
 
 const pageLoad = (data) => {
-    let display = document.getElementById('result')
-    display.innerHTML = ""
-    let allUsers = usersDetails.allData()
-    let uInfo = document.getElementById('info')
-    uInfo.innerHTML = ""
-    uInfo.innerText = 'Contact: ' + allUsers[data.bookHolderId - 1].email
+  let display = document.getElementById("result");
+  display.innerHTML = "";
+  let allUsers = usersDetails.allData();
+  let uInfo = document.getElementById("info");
+  uInfo.innerHTML = "";
+  uInfo.innerText = "Contact: " + allUsers[data.bookHolderId - 1].email;
 
-    display.innerHTML += `<div class="col-lg-12 col-md-12 col-sm-12" id="box_1">
+  display.innerHTML += `<div class="col-lg-12 col-md-12 col-sm-12" id="box_1">
         <div class="d-flex">
             <i class="fa fa-user m-2 rounded-circle bg-white p-2" style="font-size:24px"></i>
             <div class="mt-3 text-white">Book offered by ${data.fullName}</div>
@@ -31,12 +30,11 @@ const pageLoad = (data) => {
             </div>
         </div>
         <i class="fa fa-arrow-left text-white mt-3" onclick="goBack()" aria-hidden="true"></i>
-    </div>`
-}
-
+    </div>`;
+};
 
 const goBack = () => {
-    setTimeout(function () {
-        location.href = "../html/userHomepage.html"
-    }, 500)
-}
+  setTimeout(function () {
+    location.href = "../html/userHomepage.html";
+  }, 500);
+};
